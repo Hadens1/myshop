@@ -1,10 +1,4 @@
-CREATE TABLE IF NOT EXISTS Users (
-  user_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  password VARCHAR(45) NOT NULL,
-  role ENUM('customer', 'administrator') NOT NULL,
-  user_profile_id INT NOT NULL,
-  FOREIGN KEY (user_profile_id) REFERENCES UserProfile (user_profile_id)
-);
+
 SELECT 'password_user1', 'administrator', user_profile_id
 FROM UserProfile
 WHERE name_us = 'Иван Иванов';
